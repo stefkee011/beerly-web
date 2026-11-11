@@ -7,3 +7,11 @@ export interface Beer {
   abvPercentage: number;
   imageUrl: string;
 }
+
+export interface Review {
+  id: number;
+  rating: number;
+  comment: string | null;
+  createdAt: string;
+  username: string;
+}
