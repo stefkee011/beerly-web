@@ -1,12 +1,16 @@
 import { useEffect, useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import { API_URL } from '../config';
+import { ReviewForm } from '../components/ReviewForm';
+import { useAuth } from '../auth';
 import type { Beer, Review } from '../types';
 
 function BeerDetail() {
   const { id } = useParams();
+  const { username } = useAuth();
   const [beer, setBeer] = useState<Beer | null>(null);
   const [reviews, setReviews] = useState<Review[]>([]);
+  const [reviewsVersion, setReviewsVersion] = useState(0);
   const [loading, setLoading] = useState(true);
   const [failed, setFailed] = useState(false);
 
@@ -26,7 +30,7 @@ function BeerDetail() {
       .then((res) => (res.ok ? res.json() : []))
       .then(setReviews)
       .catch(() => setReviews([]));
-  }, [id]);
+  }, [id, reviewsVersion]);
 
   if (loading) return <p className="text-neutral-400">Loading...</p>;
   if (failed || !beer) return <p className="text-neutral-400">Couldn't find this beer.</p>;
@@ -36,6 +40,8 @@ function BeerDetail() {
       ? reviews.reduce((sum, r) => sum + r.rating, 0) / reviews.length
       : null;
 
+  const myReview = reviews.find((r) => r.username === username);
+
   return (
     <div>
       <Link to="/" className="text-sm text-neutral-400 hover:text-neutral-100">
@@ -44,7 +50,11 @@ function BeerDetail() {
 
       <div className="mt-8 grid gap-10 md:grid-cols-2">
         <div className="flex aspect-square items-center justify-center rounded-2xl bg-neutral-900 p-10">
-          <img src={beer.imageUrl} alt={beer.name} className="max-h-full max-w-full object-contain" />
+          {beer.imageUrl ? (
+            <img src={beer.imageUrl} alt={beer.name} className="max-h-full max-w-full object-contain" />
+          ) : (
+            <span className="text-sm text-neutral-600">No image</span>
+          )}
         </div>
 
         <div>
@@ -80,11 +90,18 @@ function BeerDetail() {
       <section className="mt-16">
         <h2 className="text-xl font-semibold tracking-tight">Reviews</h2>
 
+        <ReviewForm
+            key={myReview?.id ?? 'new'}
+            beerId={beer.id}
+            existing={myReview}
+            onSubmitted={() => setReviewsVersion((v) => v + 1)}
+        />
+
         {reviews.length === 0 && (
-          <p className="mt-4 text-neutral-500">No reviews yet.</p>
+          <p className="mt-8 text-neutral-500">No reviews yet.</p>
         )}
 
-        <ul className="mt-6 divide-y divide-neutral-800">
+        <ul className="mt-8 divide-y divide-neutral-800">
           {reviews.map((review) => (
             <li key={review.id} className="py-5">
               <div className="flex items-baseline justify-between">

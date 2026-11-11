@@ -32,7 +32,11 @@ function BeerList() {
             className="overflow-hidden rounded-2xl bg-neutral-900 transition hover:bg-neutral-800"
           >
             <div className="flex aspect-square items-center justify-center bg-neutral-800 p-6">
-              <img src={beer.imageUrl} alt={beer.name} className="max-h-full max-w-full object-contain" />
+              {beer.imageUrl ? (
+                    <img src={beer.imageUrl} alt={beer.name} className="max-h-full max-w-full object-contain" />
+                ) : (
+                    <span className="text-sm text-neutral-600">No image</span>
+                )}
             </div>
             <div className="p-4">
               <h2 className="truncate font-medium">{beer.name}</h2>
