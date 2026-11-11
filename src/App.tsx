@@ -3,6 +3,7 @@ import { useAuth } from './auth';
 import BeerList from './pages/BeerList';
 import BeerDetail from './pages/BeerDetail';
 import Login from './pages/Login';
+import Register from './pages/Register';
 
 function App() {
   const { username, logout } = useAuth();
@@ -20,9 +21,12 @@ function App() {
             </button>
           </div>
         ) : (
-          <Link to="/login" className="text-sm text-neutral-400 hover:text-neutral-100">
-            Log in
-          </Link>
+          <div className="flex items-center gap-4 text-sm">
+            <Link to="/login" className="text-neutral-400 hover:text-neutral-100">Log in</Link>
+            <Link to="/register" className="rounded-lg bg-neutral-100 px-3 py-1.5 font-medium text-neutral-950 hover:bg-white">
+            Sign up
+            </Link>
+          </div>
         )}
       </header>
 
@@ -31,6 +35,7 @@ function App() {
           <Route path="/" element={<BeerList />} />
           <Route path="/beers/:id" element={<BeerDetail />} />
           <Route path="/login" element={<Login />} />
+          <Route path="/register" element={<Register />} />
         </Routes>
       </main>
     </div>

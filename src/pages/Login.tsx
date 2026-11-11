@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import type { FormEvent } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 import { useAuth } from '../auth';
 
 function Login() {
@@ -50,6 +50,11 @@ function Login() {
           Log in
         </button>
       </form>
+
+      <p className="mt-6 text-center text-sm text-neutral-500">
+        New here?{' '}
+        <Link to="/register" className="text-neutral-300 underline">Create an account</Link>
+       </p>
     </div>
   );
 }
