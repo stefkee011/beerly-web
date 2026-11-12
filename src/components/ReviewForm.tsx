@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import type { FormEvent } from 'react';
 import { Link } from 'react-router-dom';
+import { Trans, useTranslation } from 'react-i18next';
 import { API_URL } from '../config';
 import { useAuth } from '../auth';
 import type { Review } from '../types';
@@ -14,6 +15,7 @@ interface ReviewFormProps {
 const ratingOptions = [1, 1.5, 2, 2.5, 3, 3.5, 4, 4.5, 5];
 
 export function ReviewForm({ beerId, existing, onSubmitted }: ReviewFormProps) {
+  const { t } = useTranslation();
   const { token } = useAuth();
   const [rating, setRating] = useState(existing?.rating ?? 3);
   const [comment, setComment] = useState(existing?.comment ?? '');
@@ -24,10 +26,10 @@ export function ReviewForm({ beerId, existing, onSubmitted }: ReviewFormProps) {
   if (!token) {
     return (
       <p className="mt-6 text-neutral-500">
-        <Link to="/login" className="text-neutral-300 underline">
-          Log in
-        </Link>{' '}
-        to leave a review.
+        <Trans
+          i18nKey="review.loginPrompt"
+          components={{ loginLink: <Link to="/login" className="text-neutral-300 underline" /> }}
+        />
       </p>
     );
   }
@@ -54,14 +56,14 @@ export function ReviewForm({ beerId, existing, onSubmitted }: ReviewFormProps) {
       if (res.ok) {
         onSubmitted();
       } else if (res.status === 401) {
-        setError('Your session expired. Please log in again.');
+        setError(t('common.sessionExpired'));
       } else if (res.status === 409) {
-        setError('You have already reviewed this beer.');
+        setError(t('review.alreadyReviewed'));
       } else {
-        setError('Something went wrong. Please try again.');
+        setError(t('common.somethingWrong'));
       }
     } catch {
-      setError("Couldn't reach the server.");
+      setError(t('common.serverError'));
     } finally {
       setSubmitting(false);
     }
@@ -81,12 +83,12 @@ export function ReviewForm({ beerId, existing, onSubmitted }: ReviewFormProps) {
       if (res.ok) {
         onSubmitted();
       } else if (res.status === 401) {
-        setError('Your session expired. Please log in again.');
+        setError(t('common.sessionExpired'));
       } else {
-        setError('Something went wrong. Please try again.');
+        setError(t('common.somethingWrong'));
       }
     } catch {
-      setError("Couldn't reach the server.");
+      setError(t('common.serverError'));
     } finally {
       setSubmitting(false);
       setConfirmingDelete(false);
@@ -95,11 +97,11 @@ export function ReviewForm({ beerId, existing, onSubmitted }: ReviewFormProps) {
 
   return (
     <form onSubmit={handleSubmit} className="mt-6 space-y-4 rounded-2xl bg-neutral-900 p-5">
-      {existing && <p className="text-sm font-medium text-neutral-300">Your review</p>}
+      {existing && <p className="text-sm font-medium text-neutral-300">{t('review.yourReview')}</p>}
 
       <div className="flex items-center gap-3">
         <label htmlFor="rating" className="text-sm text-neutral-400">
-          Rating
+          {t('review.rating')}
         </label>
         <select
           id="rating"
@@ -118,7 +120,7 @@ export function ReviewForm({ beerId, existing, onSubmitted }: ReviewFormProps) {
       <textarea
         value={comment}
         onChange={(e) => setComment(e.target.value)}
-        placeholder="What did you think? (optional)"
+        placeholder={t('review.placeholder')}
         rows={3}
         className="w-full resize-none rounded-xl bg-neutral-800 px-4 py-3 outline-none ring-1 ring-neutral-700 focus:ring-neutral-500"
       />
@@ -131,19 +133,19 @@ export function ReviewForm({ beerId, existing, onSubmitted }: ReviewFormProps) {
           disabled={submitting}
           className="rounded-xl bg-neutral-100 px-5 py-2.5 font-medium text-neutral-950 transition hover:bg-white disabled:opacity-50"
         >
-          {submitting ? 'Saving…' : existing ? 'Update review' : 'Post review'}
+          {submitting ? t('review.saving') : existing ? t('review.update') : t('review.post')}
         </button>
 
         {existing &&
           (confirmingDelete ? (
             <div className="flex items-center gap-3 text-sm">
-              <span className="text-neutral-400">Delete your review?</span>
+              <span className="text-neutral-400">{t('review.confirmDelete')}</span>
               <button
                 type="button"
                 onClick={() => setConfirmingDelete(false)}
                 className="text-neutral-400 transition hover:text-neutral-100"
               >
-                Cancel
+                {t('common.cancel')}
               </button>
               <button
                 type="button"
@@ -151,7 +153,7 @@ export function ReviewForm({ beerId, existing, onSubmitted }: ReviewFormProps) {
                 disabled={submitting}
                 className="rounded-lg border border-red-500/40 bg-red-500/10 px-3 py-1.5 text-red-400 transition hover:bg-red-500/20 disabled:opacity-50"
               >
-                Delete
+                {t('common.delete')}
               </button>
             </div>
           ) : (
@@ -160,7 +162,7 @@ export function ReviewForm({ beerId, existing, onSubmitted }: ReviewFormProps) {
               onClick={() => setConfirmingDelete(true)}
               className="rounded-lg border border-red-500/30 px-3 py-1.5 text-sm text-red-400 transition hover:bg-red-500/10"
             >
-              Delete review
+              {t('review.delete')}
             </button>
           ))}
       </div>

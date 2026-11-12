@@ -1,0 +1,65 @@
+{
+  "nav": { "rankings": "Рейтинги", "login": "Увійти", "signup": "Реєстрація", "logout": "Вийти" },
+  "common": {
+    "loading": "Завантаження…",
+    "back": "← Назад",
+    "serverError": "Не вдалося підключитися до сервера.",
+    "sessionExpired": "Сеанс завершився. Увійдіть знову.",
+    "somethingWrong": "Щось пішло не так. Спробуйте ще раз.",
+    "cancel": "Скасувати",
+    "delete": "Видалити"
+  },
+  "beers": {
+    "notFound": "Це пиво не знайдено.",
+    "noImage": "Немає зображення",
+    "style": "Стиль",
+    "country": "Країна",
+    "abv": "Міцність",
+    "reviews": "Відгуки",
+    "noReviews": "Поки що немає відгуків.",
+    "reviewCount_one": "{{count}} відгук",
+    "reviewCount_few": "{{count}} відгуки",
+    "reviewCount_many": "{{count}} відгуків",
+    "reviewCount_other": "{{count}} відгуку",
+    "beerCount_one": "{{count}} сорт",
+    "beerCount_few": "{{count}} сорти",
+    "beerCount_many": "{{count}} сортів",
+    "beerCount_other": "{{count}} сорту"
+  },
+  "review": {
+    "loginPrompt": "<loginLink>Увійдіть</loginLink>, щоб залишити відгук.",
+    "yourReview": "Ваш відгук",
+    "rating": "Оцінка",
+    "placeholder": "Що ви думаєте? (необов’язково)",
+    "saving": "Збереження…",
+    "update": "Оновити відгук",
+    "post": "Опублікувати відгук",
+    "delete": "Видалити відгук",
+    "confirmDelete": "Видалити ваш відгук?",
+    "alreadyReviewed": "Ви вже залишили відгук про це пиво."
+  },
+  "auth": {
+    "loginTitle": "Вхід",
+    "username": "Ім’я користувача",
+    "password": "Пароль",
+    "invalidCredentials": "Неправильне ім’я користувача або пароль.",
+    "newHere": "Вперше тут? <registerLink>Створіть обліковий запис</registerLink>",
+    "registerTitle": "Створити обліковий запис",
+    "email": "Електронна пошта",
+    "countryOptional": "Країна (необов’язково)",
+    "passwordTooShort": "Пароль має містити щонайменше 8 символів.",
+    "creating": "Створення…",
+    "createAccount": "Створити обліковий запис",
+    "haveAccount": "Вже є обліковий запис? <loginLink>Увійти</loginLink>"
+  },
+  "rankings": {
+    "title": "Рейтинги",
+    "subtitle": "Хто спробував найбільше різних сортів пива.",
+    "global": "Світовий",
+    "local": "Місцевий",
+    "selectCountry": "Оберіть країну",
+    "pickCountry": "Оберіть країну, щоб побачити її рейтинг.",
+    "failed": "Не вдалося завантажити рейтинги.",
+    "empty": "Рейтингів поки немає."
+  }
+}

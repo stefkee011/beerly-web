@@ -1,0 +1,65 @@
+{
+  "nav": { "rankings": "Žebříčky", "login": "Přihlásit se", "signup": "Registrace", "logout": "Odhlásit se" },
+  "common": {
+    "loading": "Načítání…",
+    "back": "← Zpět",
+    "serverError": "Nelze se připojit k serveru.",
+    "sessionExpired": "Platnost relace vypršela. Přihlaste se prosím znovu.",
+    "somethingWrong": "Něco se pokazilo. Zkuste to prosím znovu.",
+    "cancel": "Zrušit",
+    "delete": "Smazat"
+  },
+  "beers": {
+    "notFound": "Toto pivo nebylo nalezeno.",
+    "noImage": "Bez obrázku",
+    "style": "Styl",
+    "country": "Země",
+    "abv": "Obsah alkoholu",
+    "reviews": "Recenze",
+    "noReviews": "Zatím žádné recenze.",
+    "reviewCount_one": "{{count}} recenze",
+    "reviewCount_few": "{{count}} recenze",
+    "reviewCount_many": "{{count}} recenze",
+    "reviewCount_other": "{{count}} recenzí",
+    "beerCount_one": "{{count}} pivo",
+    "beerCount_few": "{{count}} piva",
+    "beerCount_many": "{{count}} piva",
+    "beerCount_other": "{{count}} piv"
+  },
+  "review": {
+    "loginPrompt": "<loginLink>Přihlaste se</loginLink> a přidejte recenzi.",
+    "yourReview": "Vaše recenze",
+    "rating": "Hodnocení",
+    "placeholder": "Jak vám chutnalo? (volitelné)",
+    "saving": "Ukládání…",
+    "update": "Upravit recenzi",
+    "post": "Odeslat recenzi",
+    "delete": "Smazat recenzi",
+    "confirmDelete": "Smazat vaši recenzi?",
+    "alreadyReviewed": "Toto pivo jste už hodnotili."
+  },
+  "auth": {
+    "loginTitle": "Přihlášení",
+    "username": "Uživatelské jméno",
+    "password": "Heslo",
+    "invalidCredentials": "Nesprávné uživatelské jméno nebo heslo.",
+    "newHere": "Jste tu poprvé? <registerLink>Vytvořte si účet</registerLink>",
+    "registerTitle": "Vytvořit účet",
+    "email": "E-mail",
+    "countryOptional": "Země (volitelné)",
+    "passwordTooShort": "Heslo musí mít alespoň 8 znaků.",
+    "creating": "Vytváření…",
+    "createAccount": "Vytvořit účet",
+    "haveAccount": "Už máte účet? <loginLink>Přihlaste se</loginLink>"
+  },
+  "rankings": {
+    "title": "Žebříčky",
+    "subtitle": "Kdo vyzkoušel nejvíce různých piv.",
+    "global": "Celosvětově",
+    "local": "Místní",
+    "selectCountry": "Vyberte zemi",
+    "pickCountry": "Vyberte zemi pro zobrazení jejího žebříčku.",
+    "failed": "Žebříčky se nepodařilo načíst.",
+    "empty": "Zatím žádné žebříčky."
+  }
+}

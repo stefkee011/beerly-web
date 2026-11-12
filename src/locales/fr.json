@@ -1,0 +1,63 @@
+{
+  "nav": { "rankings": "Classements", "login": "Connexion", "signup": "Inscription", "logout": "Déconnexion" },
+  "common": {
+    "loading": "Chargement…",
+    "back": "← Retour",
+    "serverError": "Impossible de joindre le serveur.",
+    "sessionExpired": "Votre session a expiré. Veuillez vous reconnecter.",
+    "somethingWrong": "Une erreur s’est produite. Veuillez réessayer.",
+    "cancel": "Annuler",
+    "delete": "Supprimer"
+  },
+  "beers": {
+    "notFound": "Cette bière est introuvable.",
+    "noImage": "Aucune image",
+    "style": "Style",
+    "country": "Pays",
+    "abv": "Degré d’alcool",
+    "reviews": "Avis",
+    "noReviews": "Aucun avis pour le moment.",
+    "reviewCount_one": "{{count}} avis",
+    "reviewCount_many": "{{count}} d’avis",
+    "reviewCount_other": "{{count}} avis",
+    "beerCount_one": "{{count}} bière",
+    "beerCount_many": "{{count}} de bières",
+    "beerCount_other": "{{count}} bières"
+  },
+  "review": {
+    "loginPrompt": "<loginLink>Connectez-vous</loginLink> pour laisser un avis.",
+    "yourReview": "Votre avis",
+    "rating": "Note",
+    "placeholder": "Qu’en avez-vous pensé ? (facultatif)",
+    "saving": "Enregistrement…",
+    "update": "Mettre à jour l’avis",
+    "post": "Publier l’avis",
+    "delete": "Supprimer l’avis",
+    "confirmDelete": "Supprimer votre avis ?",
+    "alreadyReviewed": "Vous avez déjà donné votre avis sur cette bière."
+  },
+  "auth": {
+    "loginTitle": "Connexion",
+    "username": "Nom d’utilisateur",
+    "password": "Mot de passe",
+    "invalidCredentials": "Nom d’utilisateur ou mot de passe incorrect.",
+    "newHere": "Nouveau ici ? <registerLink>Créer un compte</registerLink>",
+    "registerTitle": "Créer un compte",
+    "email": "E-mail",
+    "countryOptional": "Pays (facultatif)",
+    "passwordTooShort": "Le mot de passe doit contenir au moins 8 caractères.",
+    "creating": "Création…",
+    "createAccount": "Créer un compte",
+    "haveAccount": "Vous avez déjà un compte ? <loginLink>Connexion</loginLink>"
+  },
+  "rankings": {
+    "title": "Classements",
+    "subtitle": "Qui a goûté le plus de bières différentes.",
+    "global": "Mondial",
+    "local": "Local",
+    "selectCountry": "Choisir un pays",
+    "pickCountry": "Choisissez un pays pour voir son classement.",
+    "failed": "Impossible de charger les classements.",
+    "empty": "Aucun classement pour le moment."
+  }
+}

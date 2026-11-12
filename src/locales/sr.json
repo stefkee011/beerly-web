@@ -1,0 +1,63 @@
+{
+  "nav": { "rankings": "Rang liste", "login": "Prijava", "signup": "Registracija", "logout": "Odjava" },
+  "common": {
+    "loading": "Učitavanje...",
+    "back": "← Nazad",
+    "serverError": "Nije moguće povezati se sa serverom.",
+    "sessionExpired": "Sesija je istekla. Prijavite se ponovo.",
+    "somethingWrong": "Došlo je do greške. Pokušajte ponovo.",
+    "cancel": "Otkaži",
+    "delete": "Obriši"
+  },
+  "beers": {
+    "notFound": "Ovo pivo nije pronađeno.",
+    "noImage": "Nema slike",
+    "style": "Stil",
+    "country": "Zemlja",
+    "abv": "Alkohol",
+    "reviews": "Recenzije",
+    "noReviews": "Još nema recenzija.",
+    "reviewCount_one": "{{count}} recenzija",
+    "reviewCount_few": "{{count}} recenzije",
+    "reviewCount_other": "{{count}} recenzija",
+    "beerCount_one": "{{count}} pivo",
+    "beerCount_few": "{{count}} piva",
+    "beerCount_other": "{{count}} piva"
+  },
+  "review": {
+    "loginPrompt": "<loginLink>Prijavite se</loginLink> da biste ostavili recenziju.",
+    "yourReview": "Vaša recenzija",
+    "rating": "Ocena",
+    "placeholder": "Šta mislite? (opciono)",
+    "saving": "Čuvanje…",
+    "update": "Ažuriraj recenziju",
+    "post": "Objavi recenziju",
+    "delete": "Obriši recenziju",
+    "confirmDelete": "Obrisati vašu recenziju?",
+    "alreadyReviewed": "Već ste ocenili ovo pivo."
+  },
+  "auth": {
+    "loginTitle": "Prijava",
+    "username": "Korisničko ime",
+    "password": "Lozinka",
+    "invalidCredentials": "Pogrešno korisničko ime ili lozinka.",
+    "newHere": "Prvi put ovde? <registerLink>Napravite nalog</registerLink>",
+    "registerTitle": "Napravite nalog",
+    "email": "E-pošta",
+    "countryOptional": "Zemlja (opciono)",
+    "passwordTooShort": "Lozinka mora imati najmanje 8 znakova.",
+    "creating": "Pravljenje…",
+    "createAccount": "Napravi nalog",
+    "haveAccount": "Već imate nalog? <loginLink>Prijavite se</loginLink>"
+  },
+  "rankings": {
+    "title": "Rang liste",
+    "subtitle": "Ko je probao najviše različitih piva.",
+    "global": "Globalno",
+    "local": "Lokalno",
+    "selectCountry": "Izaberite zemlju",
+    "pickCountry": "Izaberite zemlju da biste videli njenu rang listu.",
+    "failed": "Rang liste nije moguće učitati.",
+    "empty": "Još nema rang lista."
+  }
+}

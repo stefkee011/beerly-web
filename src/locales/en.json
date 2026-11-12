@@ -1,0 +1,61 @@
+{
+  "nav": { "rankings": "Rankings", "login": "Log in", "signup": "Sign up", "logout": "Log out" },
+  "common": {
+    "loading": "Loading...",
+    "back": "← Back",
+    "serverError": "Couldn't reach the server.",
+    "sessionExpired": "Your session expired. Please log in again.",
+    "somethingWrong": "Something went wrong. Please try again.",
+    "cancel": "Cancel",
+    "delete": "Delete"
+  },
+  "beers": {
+    "notFound": "Couldn't find this beer.",
+    "noImage": "No image",
+    "style": "Style",
+    "country": "Country",
+    "abv": "ABV",
+    "reviews": "Reviews",
+    "noReviews": "No reviews yet.",
+    "reviewCount_one": "{{count}} review",
+    "reviewCount_other": "{{count}} reviews",
+    "beerCount_one": "{{count}} beer",
+    "beerCount_other": "{{count}} beers"
+  },
+  "review": {
+    "loginPrompt": "<loginLink>Log in</loginLink> to leave a review.",
+    "yourReview": "Your review",
+    "rating": "Rating",
+    "placeholder": "What did you think? (optional)",
+    "saving": "Saving…",
+    "update": "Update review",
+    "post": "Post review",
+    "delete": "Delete review",
+    "confirmDelete": "Delete your review?",
+    "alreadyReviewed": "You have already reviewed this beer."
+  },
+  "auth": {
+    "loginTitle": "Log in",
+    "username": "Username",
+    "password": "Password",
+    "invalidCredentials": "Invalid username or password.",
+    "newHere": "New here? <registerLink>Create an account</registerLink>",
+    "registerTitle": "Create account",
+    "email": "Email",
+    "countryOptional": "Country (optional)",
+    "passwordTooShort": "Password must be at least 8 characters.",
+    "creating": "Creating…",
+    "createAccount": "Create account",
+    "haveAccount": "Already have an account? <loginLink>Log in</loginLink>"
+  },
+  "rankings": {
+    "title": "Rankings",
+    "subtitle": "Who has tried the most different beers.",
+    "global": "Global",
+    "local": "Local",
+    "selectCountry": "Select a country",
+    "pickCountry": "Select a country to see its ranking.",
+    "failed": "Couldn't load the rankings.",
+    "empty": "No rankings yet."
+  }
+}

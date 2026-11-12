@@ -1,0 +1,65 @@
+{
+  "nav": { "rankings": "Rankingi", "login": "Zaloguj się", "signup": "Zarejestruj się", "logout": "Wyloguj się" },
+  "common": {
+    "loading": "Ładowanie…",
+    "back": "← Wstecz",
+    "serverError": "Nie można połączyć się z serwerem.",
+    "sessionExpired": "Twoja sesja wygasła. Zaloguj się ponownie.",
+    "somethingWrong": "Coś poszło nie tak. Spróbuj ponownie.",
+    "cancel": "Anuluj",
+    "delete": "Usuń"
+  },
+  "beers": {
+    "notFound": "Nie znaleziono tego piwa.",
+    "noImage": "Brak zdjęcia",
+    "style": "Styl",
+    "country": "Kraj",
+    "abv": "Zawartość alkoholu",
+    "reviews": "Recenzje",
+    "noReviews": "Brak recenzji.",
+    "reviewCount_one": "{{count}} recenzja",
+    "reviewCount_few": "{{count}} recenzje",
+    "reviewCount_many": "{{count}} recenzji",
+    "reviewCount_other": "{{count}} recenzji",
+    "beerCount_one": "{{count}} piwo",
+    "beerCount_few": "{{count}} piwa",
+    "beerCount_many": "{{count}} piw",
+    "beerCount_other": "{{count}} piwa"
+  },
+  "review": {
+    "loginPrompt": "<loginLink>Zaloguj się</loginLink>, aby dodać recenzję.",
+    "yourReview": "Twoja recenzja",
+    "rating": "Ocena",
+    "placeholder": "Co o nim myślisz? (opcjonalnie)",
+    "saving": "Zapisywanie…",
+    "update": "Zaktualizuj recenzję",
+    "post": "Opublikuj recenzję",
+    "delete": "Usuń recenzję",
+    "confirmDelete": "Usunąć Twoją recenzję?",
+    "alreadyReviewed": "To piwo zostało już przez Ciebie ocenione."
+  },
+  "auth": {
+    "loginTitle": "Logowanie",
+    "username": "Nazwa użytkownika",
+    "password": "Hasło",
+    "invalidCredentials": "Nieprawidłowa nazwa użytkownika lub hasło.",
+    "newHere": "Pierwszy raz tutaj? <registerLink>Załóż konto</registerLink>",
+    "registerTitle": "Załóż konto",
+    "email": "E-mail",
+    "countryOptional": "Kraj (opcjonalnie)",
+    "passwordTooShort": "Hasło musi mieć co najmniej 8 znaków.",
+    "creating": "Tworzenie…",
+    "createAccount": "Załóż konto",
+    "haveAccount": "Masz już konto? <loginLink>Zaloguj się</loginLink>"
+  },
+  "rankings": {
+    "title": "Rankingi",
+    "subtitle": "Kto spróbował najwięcej różnych piw.",
+    "global": "Światowy",
+    "local": "Lokalny",
+    "selectCountry": "Wybierz kraj",
+    "pickCountry": "Wybierz kraj, aby zobaczyć jego ranking.",
+    "failed": "Nie udało się załadować rankingów.",
+    "empty": "Brak rankingów."
+  }
+}

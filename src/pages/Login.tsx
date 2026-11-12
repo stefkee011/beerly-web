@@ -1,9 +1,11 @@
 import { useState } from 'react';
 import type { FormEvent } from 'react';
-import { useNavigate, Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
+import { Trans, useTranslation } from 'react-i18next';
 import { useAuth } from '../auth';
 
 function Login() {
+  const { t } = useTranslation();
   const { login } = useAuth();
   const navigate = useNavigate();
   const [username, setUsername] = useState('');
@@ -18,26 +20,26 @@ function Login() {
     if (ok) {
       navigate('/');
     } else {
-      setError('Invalid username or password.');
+      setError(t('auth.invalidCredentials'));
     }
   }
 
   return (
     <div className="mx-auto max-w-sm">
-      <h1 className="text-2xl font-semibold tracking-tight">Log in</h1>
+      <h1 className="text-2xl font-semibold tracking-tight">{t('auth.loginTitle')}</h1>
 
       <form onSubmit={handleSubmit} className="mt-8 space-y-4">
         <input
           value={username}
           onChange={(e) => setUsername(e.target.value)}
-          placeholder="Username"
+          placeholder={t('auth.username')}
           className="w-full rounded-xl bg-neutral-900 px-4 py-3 outline-none ring-1 ring-neutral-800 focus:ring-neutral-600"
         />
         <input
           type="password"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
-          placeholder="Password"
+          placeholder={t('auth.password')}
           className="w-full rounded-xl bg-neutral-900 px-4 py-3 outline-none ring-1 ring-neutral-800 focus:ring-neutral-600"
         />
 
@@ -47,14 +49,16 @@ function Login() {
           type="submit"
           className="w-full rounded-xl bg-neutral-100 py-3 font-medium text-neutral-950 transition hover:bg-white"
         >
-          Log in
+          {t('auth.loginTitle')}
         </button>
       </form>
 
       <p className="mt-6 text-center text-sm text-neutral-500">
-        New here?{' '}
-        <Link to="/register" className="text-neutral-300 underline">Create an account</Link>
-       </p>
+        <Trans
+          i18nKey="auth.newHere"
+          components={{ registerLink: <Link to="/register" className="text-neutral-300 underline" /> }}
+        />
+      </p>
     </div>
   );
 }

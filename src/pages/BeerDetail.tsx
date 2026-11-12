@@ -1,13 +1,16 @@
 import { useEffect, useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import { API_URL } from '../config';
-import { ReviewForm } from '../components/ReviewForm';
+import { countryName } from '../countries';
 import { useAuth } from '../auth';
+import { ReviewForm } from '../components/ReviewForm';
 import type { Beer, Review } from '../types';
 
 function BeerDetail() {
   const { id } = useParams();
   const { username } = useAuth();
+  const { t, i18n } = useTranslation();
   const [beer, setBeer] = useState<Beer | null>(null);
   const [reviews, setReviews] = useState<Review[]>([]);
   const [reviewsVersion, setReviewsVersion] = useState(0);
@@ -32,8 +35,8 @@ function BeerDetail() {
       .catch(() => setReviews([]));
   }, [id, reviewsVersion]);
 
-  if (loading) return <p className="text-neutral-400">Loading...</p>;
-  if (failed || !beer) return <p className="text-neutral-400">Couldn't find this beer.</p>;
+  if (loading) return <p className="text-neutral-400">{t('common.loading')}</p>;
+  if (failed || !beer) return <p className="text-neutral-400">{t('beers.notFound')}</p>;
 
   const average =
     reviews.length > 0
@@ -45,7 +48,7 @@ function BeerDetail() {
   return (
     <div>
       <Link to="/" className="text-sm text-neutral-400 hover:text-neutral-100">
-        ← Back
+        {t('common.back')}
       </Link>
 
       <div className="mt-8 grid gap-10 md:grid-cols-2">
@@ -53,7 +56,7 @@ function BeerDetail() {
           {beer.imageUrl ? (
             <img src={beer.imageUrl} alt={beer.name} className="max-h-full max-w-full object-contain" />
           ) : (
-            <span className="text-sm text-neutral-600">No image</span>
+            <span className="text-sm text-neutral-600">{t('beers.noImage')}</span>
           )}
         </div>
 
@@ -66,21 +69,21 @@ function BeerDetail() {
               {average !== null ? average.toFixed(1) : '–'}
             </span>
             <span className="text-sm text-neutral-500">
-              {reviews.length === 1 ? '1 review' : `${reviews.length} reviews`}
+              {t('beers.reviewCount', { count: reviews.length })}
             </span>
           </div>
 
           <dl className="mt-8 space-y-4">
             <div>
-              <dt className="text-xs uppercase tracking-wide text-neutral-500">Style</dt>
+              <dt className="text-xs uppercase tracking-wide text-neutral-500">{t('beers.style')}</dt>
               <dd>{beer.style}</dd>
             </div>
             <div>
-              <dt className="text-xs uppercase tracking-wide text-neutral-500">Country</dt>
-              <dd>{beer.country}</dd>
+              <dt className="text-xs uppercase tracking-wide text-neutral-500">{t('beers.country')}</dt>
+              <dd>{countryName(beer.country, i18n.resolvedLanguage ?? 'en')}</dd>
             </div>
             <div>
-              <dt className="text-xs uppercase tracking-wide text-neutral-500">ABV</dt>
+              <dt className="text-xs uppercase tracking-wide text-neutral-500">{t('beers.abv')}</dt>
               <dd>{beer.abvPercentage}%</dd>
             </div>
           </dl>
@@ -88,17 +91,17 @@ function BeerDetail() {
       </div>
 
       <section className="mt-16">
-        <h2 className="text-xl font-semibold tracking-tight">Reviews</h2>
+        <h2 className="text-xl font-semibold tracking-tight">{t('beers.reviews')}</h2>
 
         <ReviewForm
-            key={myReview?.id ?? 'new'}
-            beerId={beer.id}
-            existing={myReview}
-            onSubmitted={() => setReviewsVersion((v) => v + 1)}
+          key={myReview?.id ?? 'new'}
+          beerId={beer.id}
+          existing={myReview}
+          onSubmitted={() => setReviewsVersion((v) => v + 1)}
         />
 
         {reviews.length === 0 && (
-          <p className="mt-8 text-neutral-500">No reviews yet.</p>
+          <p className="mt-8 text-neutral-500">{t('beers.noReviews')}</p>
         )}
 
         <ul className="mt-8 divide-y divide-neutral-800">
@@ -107,7 +110,7 @@ function BeerDetail() {
               <div className="flex items-baseline justify-between">
                 <span className="font-medium">{review.username}</span>
                 <span className="text-sm text-neutral-500">
-                  {new Date(review.createdAt).toLocaleDateString()}
+                  {new Date(review.createdAt).toLocaleDateString(i18n.resolvedLanguage)}
                 </span>
               </div>
               <p className="mt-1 text-sm text-neutral-400">{review.rating} / 5</p>

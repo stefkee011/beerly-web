@@ -1,0 +1,63 @@
+{
+  "nav": { "rankings": "Clasificaciones", "login": "Iniciar sesión", "signup": "Registrarse", "logout": "Cerrar sesión" },
+  "common": {
+    "loading": "Cargando...",
+    "back": "← Volver",
+    "serverError": "No se pudo conectar con el servidor.",
+    "sessionExpired": "Tu sesión ha caducado. Inicia sesión de nuevo.",
+    "somethingWrong": "Algo salió mal. Inténtalo de nuevo.",
+    "cancel": "Cancelar",
+    "delete": "Eliminar"
+  },
+  "beers": {
+    "notFound": "No se encontró esta cerveza.",
+    "noImage": "Sin imagen",
+    "style": "Estilo",
+    "country": "País",
+    "abv": "Graduación",
+    "reviews": "Reseñas",
+    "noReviews": "Aún no hay reseñas.",
+    "reviewCount_one": "{{count}} reseña",
+    "reviewCount_many": "{{count}} de reseñas",
+    "reviewCount_other": "{{count}} reseñas",
+    "beerCount_one": "{{count}} cerveza",
+    "beerCount_many": "{{count}} de cervezas",
+    "beerCount_other": "{{count}} cervezas"
+  },
+  "review": {
+    "loginPrompt": "<loginLink>Inicia sesión</loginLink> para dejar una reseña.",
+    "yourReview": "Tu reseña",
+    "rating": "Puntuación",
+    "placeholder": "¿Qué te pareció? (opcional)",
+    "saving": "Guardando…",
+    "update": "Actualizar reseña",
+    "post": "Publicar reseña",
+    "delete": "Eliminar reseña",
+    "confirmDelete": "¿Eliminar tu reseña?",
+    "alreadyReviewed": "Ya has reseñado esta cerveza."
+  },
+  "auth": {
+    "loginTitle": "Iniciar sesión",
+    "username": "Nombre de usuario",
+    "password": "Contraseña",
+    "invalidCredentials": "Nombre de usuario o contraseña incorrectos.",
+    "newHere": "¿Eres nuevo? <registerLink>Crea una cuenta</registerLink>",
+    "registerTitle": "Crear cuenta",
+    "email": "Correo electrónico",
+    "countryOptional": "País (opcional)",
+    "passwordTooShort": "La contraseña debe tener al menos 8 caracteres.",
+    "creating": "Creando…",
+    "createAccount": "Crear cuenta",
+    "haveAccount": "¿Ya tienes una cuenta? <loginLink>Inicia sesión</loginLink>"
+  },
+  "rankings": {
+    "title": "Clasificaciones",
+    "subtitle": "Quién ha probado más cervezas diferentes.",
+    "global": "Global",
+    "local": "Local",
+    "selectCountry": "Selecciona un país",
+    "pickCountry": "Selecciona un país para ver su clasificación.",
+    "failed": "No se pudieron cargar las clasificaciones.",
+    "empty": "Aún no hay clasificaciones."
+  }
+}

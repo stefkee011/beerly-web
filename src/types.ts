@@ -15,3 +15,8 @@ export interface Review {
   createdAt: string;
   username: string;
 }
+
+export interface RankingEntry {
+  username: string;
+  uniqueBeerCount: number;
+}

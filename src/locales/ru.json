@@ -1,0 +1,65 @@
+{
+  "nav": { "rankings": "Рейтинги", "login": "Войти", "signup": "Регистрация", "logout": "Выйти" },
+  "common": {
+    "loading": "Загрузка…",
+    "back": "← Назад",
+    "serverError": "Не удалось подключиться к серверу.",
+    "sessionExpired": "Сеанс истёк. Войдите снова.",
+    "somethingWrong": "Что-то пошло не так. Попробуйте ещё раз.",
+    "cancel": "Отмена",
+    "delete": "Удалить"
+  },
+  "beers": {
+    "notFound": "Это пиво не найдено.",
+    "noImage": "Нет изображения",
+    "style": "Стиль",
+    "country": "Страна",
+    "abv": "Крепость",
+    "reviews": "Отзывы",
+    "noReviews": "Пока нет отзывов.",
+    "reviewCount_one": "{{count}} отзыв",
+    "reviewCount_few": "{{count}} отзыва",
+    "reviewCount_many": "{{count}} отзывов",
+    "reviewCount_other": "{{count}} отзыва",
+    "beerCount_one": "{{count}} сорт",
+    "beerCount_few": "{{count}} сорта",
+    "beerCount_many": "{{count}} сортов",
+    "beerCount_other": "{{count}} сорта"
+  },
+  "review": {
+    "loginPrompt": "<loginLink>Войдите</loginLink>, чтобы оставить отзыв.",
+    "yourReview": "Ваш отзыв",
+    "rating": "Оценка",
+    "placeholder": "Что вы думаете? (необязательно)",
+    "saving": "Сохранение…",
+    "update": "Обновить отзыв",
+    "post": "Опубликовать отзыв",
+    "delete": "Удалить отзыв",
+    "confirmDelete": "Удалить ваш отзыв?",
+    "alreadyReviewed": "Вы уже оставили отзыв на это пиво."
+  },
+  "auth": {
+    "loginTitle": "Вход",
+    "username": "Имя пользователя",
+    "password": "Пароль",
+    "invalidCredentials": "Неверное имя пользователя или пароль.",
+    "newHere": "Впервые здесь? <registerLink>Создайте аккаунт</registerLink>",
+    "registerTitle": "Создать аккаунт",
+    "email": "Эл. почта",
+    "countryOptional": "Страна (необязательно)",
+    "passwordTooShort": "Пароль должен содержать не менее 8 символов.",
+    "creating": "Создание…",
+    "createAccount": "Создать аккаунт",
+    "haveAccount": "Уже есть аккаунт? <loginLink>Войти</loginLink>"
+  },
+  "rankings": {
+    "title": "Рейтинги",
+    "subtitle": "Кто попробовал больше всего разных сортов пива.",
+    "global": "Мировой",
+    "local": "Местный",
+    "selectCountry": "Выберите страну",
+    "pickCountry": "Выберите страну, чтобы увидеть её рейтинг.",
+    "failed": "Не удалось загрузить рейтинги.",
+    "empty": "Рейтингов пока нет."
+  }
+}

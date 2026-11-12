@@ -1,10 +1,13 @@
 import { useState } from 'react';
 import type { FormEvent } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
+import { Trans, useTranslation } from 'react-i18next';
 import { API_URL } from '../config';
 import { useAuth } from '../auth';
+import { CountrySelect } from '../components/CountrySelect';
 
 function Register() {
+  const { t } = useTranslation();
   const { login } = useAuth();
   const navigate = useNavigate();
   const [username, setUsername] = useState('');
@@ -19,7 +22,7 @@ function Register() {
     setError('');
 
     if (password.length < 8) {
-      setError('Password must be at least 8 characters.');
+      setError(t('auth.passwordTooShort'));
       return;
     }
 
@@ -33,7 +36,7 @@ function Register() {
           username: username.trim(),
           email: email.trim(),
           password,
-          country: country.trim() || null,
+          country: country || null,
         }),
       });
 
@@ -42,12 +45,12 @@ function Register() {
         navigate('/');
       } else if (res.status === 400) {
         const message = await res.text();
-        setError(message || 'Please check your details.');
+        setError(message || t('common.somethingWrong'));
       } else {
-        setError('Something went wrong. Please try again.');
+        setError(t('common.somethingWrong'));
       }
     } catch {
-      setError("Couldn't reach the server.");
+      setError(t('common.serverError'));
     } finally {
       setSubmitting(false);
     }
@@ -58,13 +61,13 @@ function Register() {
 
   return (
     <div className="mx-auto max-w-sm">
-      <h1 className="text-2xl font-semibold tracking-tight">Create account</h1>
+      <h1 className="text-2xl font-semibold tracking-tight">{t('auth.registerTitle')}</h1>
 
       <form onSubmit={handleSubmit} className="mt-8 space-y-4">
         <input
           value={username}
           onChange={(e) => setUsername(e.target.value)}
-          placeholder="Username"
+          placeholder={t('auth.username')}
           required
           className={inputStyle}
         />
@@ -72,21 +75,21 @@ function Register() {
           type="email"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
-          placeholder="Email"
+          placeholder={t('auth.email')}
           required
           className={inputStyle}
         />
-        <input
+        <CountrySelect
           value={country}
-          onChange={(e) => setCountry(e.target.value)}
-          placeholder="Country (optional)"
-          className={inputStyle}
+          onChange={setCountry}
+          placeholder={t('auth.countryOptional')}
+          className="w-full px-4 py-3"
         />
         <input
           type="password"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
-          placeholder="Password"
+          placeholder={t('auth.password')}
           required
           className={inputStyle}
         />
@@ -98,15 +101,15 @@ function Register() {
           disabled={submitting}
           className="w-full rounded-xl bg-neutral-100 py-3 font-medium text-neutral-950 transition hover:bg-white disabled:opacity-50"
         >
-          {submitting ? 'Creating…' : 'Create account'}
+          {submitting ? t('auth.creating') : t('auth.createAccount')}
         </button>
       </form>
 
       <p className="mt-6 text-center text-sm text-neutral-500">
-        Already have an account?{' '}
-        <Link to="/login" className="text-neutral-300 underline">
-          Log in
-        </Link>
+        <Trans
+          i18nKey="auth.haveAccount"
+          components={{ loginLink: <Link to="/login" className="text-neutral-300 underline" /> }}
+        />
       </p>
     </div>
   );
