@@ -4,6 +4,7 @@ import { useTranslation } from 'react-i18next';
 import { API_URL } from '../config';
 import { countryName } from '../countries';
 import { useAuth } from '../auth';
+import { imageSrc } from '../images';
 import { ReviewForm } from '../components/ReviewForm';
 import type { Beer, Review } from '../types';
 
@@ -54,7 +55,7 @@ function BeerDetail() {
       <div className="mt-8 grid gap-10 md:grid-cols-2">
         <div className="flex aspect-square items-center justify-center rounded-2xl bg-neutral-900 p-10">
           {beer.imageUrl ? (
-            <img src={beer.imageUrl} alt={beer.name} className="max-h-full max-w-full object-contain" />
+            <img src={imageSrc(beer.imageUrl)} alt={beer.name} className="max-h-full max-w-full object-contain" />
           ) : (
             <span className="text-sm text-neutral-600">{t('beers.noImage')}</span>
           )}

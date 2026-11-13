@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { API_URL } from '../config';
 import { countryName } from '../countries';
+import { imageSrc } from '../images';
 import type { Beer } from '../types';
 
 function BeerList() {
@@ -36,7 +37,7 @@ function BeerList() {
           >
             <div className="flex aspect-square items-center justify-center bg-neutral-800 p-6">
               {beer.imageUrl ? (
-                <img src={beer.imageUrl} alt={beer.name} className="max-h-full max-w-full object-contain" />
+                <img src={imageSrc(beer.imageUrl)} alt={beer.name} className="max-h-full max-w-full object-contain" />
               ) : (
                 <span className="text-sm text-neutral-600">{t('beers.noImage')}</span>
               )}

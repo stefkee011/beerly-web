@@ -1,5 +1,6 @@
 import { useState } from 'react';
-import type { FormEvent } from 'react';
+import type { ChangeEvent, FormEvent } from 'react';
+import { imageSrc } from '../images';
 import { Link, useNavigate } from 'react-router-dom';
 import { Trans, useTranslation } from 'react-i18next';
 import { API_URL } from '../config';
@@ -19,8 +20,9 @@ function AddBeer() {
   const [style, setStyle] = useState('');
   const [abv, setAbv] = useState('');
   const [country, setCountry] = useState('');
-  const [imageUrl, setImageUrl] = useState('');
-  const [imageFailed, setImageFailed] = useState(false);
+  const [imagePath, setImagePath] = useState('');
+  const [uploading, setUploading] = useState(false);
+  const [photoError, setPhotoError] = useState('');
   const [error, setError] = useState('');
   const [submitting, setSubmitting] = useState(false);
 
@@ -35,13 +37,48 @@ function AddBeer() {
     );
   }
 
+  async function handleFile(e: ChangeEvent<HTMLInputElement>) {
+    const file = e.target.files?.[0];
+    if (!file) return;
+
+    setPhotoError('');
+    setUploading(true);
+
+    try {
+        const body = new FormData();
+        body.append('file', file);
+
+        const res = await fetch(`${API_URL}/api/images`, {
+            method: 'POST',
+            headers: { Authorization: `Bearer ${token}` },
+            body,
+        });
+
+        if (res.ok) {
+            const data = await res.json();
+            setImagePath(data.imageUrl);
+        } else if (res.status === 401) {
+          setPhotoError(t('common.sessionExpired'));
+        } else if (res.status === 429) {
+          setPhotoError(t('addBeer.tooManyUploads'));
+        } else {
+          setPhotoError(t('addBeer.photoRejected'));
+        }
+    } catch {
+      setPhotoError(t('common.serverError'));
+    } finally {
+      setUploading(false);
+      e.target.value = ''; 
+    }
+  }
+
   async function handleSubmit(e: FormEvent) {
     e.preventDefault();
     setError('');
 
-    if (!country) {
-      setError(t('addBeer.invalid'));
-      return;
+    if (!country || !imagePath) {
+        setError(t('addBeer.invalid'));
+        return;
     }
 
     setSubmitting(true);
@@ -59,7 +96,7 @@ function AddBeer() {
           style: style.trim(),
           abvPercentage: Number(abv),
           country,
-          imageUrl: imageUrl.trim(),
+          imageUrl: imagePath,
         }),
       });
 
@@ -128,32 +165,26 @@ function AddBeer() {
         </div>
 
         <div>
-          <label className={labelStyle}>{t('addBeer.imageUrl')}</label>
-          <input
-            type="url"
-            value={imageUrl}
-            onChange={(e) => {
-              setImageUrl(e.target.value);
-              setImageFailed(false);
-            }}
-            required
-            className={inputStyle}
-          />
+            <label className={labelStyle}>{t('addBeer.photo')}</label>
 
-          {imageUrl.trim() && (
-            <div className="mt-3 flex size-48 items-center justify-center rounded-2xl bg-neutral-900 p-4">
-              {imageFailed ? (
-                <span className="text-center text-sm text-neutral-600">{t('addBeer.imageFailed')}</span>
-              ) : (
-                <img
-                  src={imageUrl.trim()}
-                  alt=""
-                  onError={() => setImageFailed(true)}
-                  className="max-h-full max-w-full object-contain"
+            <label className="flex size-48 cursor-pointer items-center justify-center rounded-2xl bg-neutral-900 p-4 ring-1 ring-neutral-800 transition hover:bg-neutral-800">
+                {imagePath ? (
+                    <img src={imageSrc(imagePath)} alt="" className="max-h-full max-w-full object-contain" />
+                ) : (
+                  <span className="text-center text-sm text-neutral-500">
+                    {uploading ? t('addBeer.uploading') : t('addBeer.choosePhoto')}
+                  </span>
+                )}
+                <input
+                    type="file"
+                    accept="image/jpeg,image/png,image/webp"
+                    onChange={handleFile}
+                    disabled={uploading}
+                    className="hidden"
                 />
-              )}
-            </div>
-          )}
+            </label>
+
+            {photoError && <p className="mt-2 text-sm text-red-400">{photoError}</p>}
         </div>
 
         {error && <p className="text-sm text-red-400">{error}</p>}
