@@ -61,5 +61,21 @@
     "pickCountry": "Vyberte zemi pro zobrazení jejího žebříčku.",
     "failed": "Žebříčky se nepodařilo načíst.",
     "empty": "Zatím žádné žebříčky."
+  },
+  "addBeer": {
+  "navLabel": "Přidat pivo",
+  "title": "Přidat pivo",
+  "loginPrompt": "<loginLink>Přihlaste se</loginLink> a přidejte pivo.",
+  "name": "Název piva",
+  "brewery": "Pivovar",
+  "style": "Styl (např. ležák, IPA)",
+  "abv": "Obsah alkoholu (%)",
+  "country": "Země",
+  "imageUrl": "Odkaz na obrázek (https://…)",
+  "imageFailed": "Obrázek se nepodařilo načíst.",
+  "submit": "Přidat pivo",
+  "submitting": "Přidávání…",
+  "duplicate": "Toto pivo už v databázi je.",
+  "invalid": "Zkontrolujte políčka a zkuste to znovu."
   }
 }

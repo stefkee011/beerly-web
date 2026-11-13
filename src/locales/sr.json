@@ -59,5 +59,21 @@
     "pickCountry": "Izaberite zemlju da biste videli njenu rang listu.",
     "failed": "Rang liste nije moguće učitati.",
     "empty": "Još nema rang lista."
+  },
+  "addBeer": {
+  "navLabel": "Dodaj pivo",
+  "title": "Dodaj pivo",
+  "loginPrompt": "<loginLink>Prijavite se</loginLink> da biste dodali pivo.",
+  "name": "Naziv piva",
+  "brewery": "Pivara",
+  "style": "Stil (npr. lager, IPA)",
+  "abv": "Alkohol (%)",
+  "country": "Zemlja",
+  "imageUrl": "Link slike (https://…)",
+  "imageFailed": "Slika se ne može učitati.",
+  "submit": "Dodaj pivo",
+  "submitting": "Dodavanje…",
+  "duplicate": "Ovo pivo je već u bazi.",
+  "invalid": "Proverite polja i pokušajte ponovo."
   }
 }

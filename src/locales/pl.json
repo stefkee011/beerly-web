@@ -61,5 +61,21 @@
     "pickCountry": "Wybierz kraj, aby zobaczyć jego ranking.",
     "failed": "Nie udało się załadować rankingów.",
     "empty": "Brak rankingów."
+  },
+  "addBeer": {
+  "navLabel": "Dodaj piwo",
+  "title": "Dodaj piwo",
+  "loginPrompt": "<loginLink>Zaloguj się</loginLink>, aby dodać piwo.",
+  "name": "Nazwa piwa",
+  "brewery": "Browar",
+  "style": "Styl (np. lager, IPA)",
+  "abv": "Zawartość alkoholu (%)",
+  "country": "Kraj",
+  "imageUrl": "Link do zdjęcia (https://…)",
+  "imageFailed": "Nie udało się załadować tego zdjęcia.",
+  "submit": "Dodaj piwo",
+  "submitting": "Dodawanie…",
+  "duplicate": "To piwo jest już w bazie.",
+  "invalid": "Sprawdź pola i spróbuj ponownie."
   }
 }

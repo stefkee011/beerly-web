@@ -7,6 +7,7 @@ import BeerDetail from './pages/BeerDetail';
 import Login from './pages/Login';
 import Register from './pages/Register';
 import Rankings from './pages/Rankings';
+import AddBeer from './pages/AddBeer';
 
 function App() {
   const { username, logout } = useAuth();
@@ -19,6 +20,9 @@ function App() {
           <Link to="/" className="text-2xl font-semibold tracking-tight">Beerly</Link>
           <Link to="/rankings" className="text-sm text-neutral-400 hover:text-neutral-100">
             {t('nav.rankings')}
+          </Link>
+          <Link to="/beers/new" className="text-sm text-neutral-400 hover:text-neutral-100">
+            {t('addBeer.navLabel')}
           </Link>
         </div>
 
@@ -54,6 +58,7 @@ function App() {
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
           <Route path="/rankings" element={<Rankings />} />
+          <Route path="/beers/new" element={<AddBeer />} />
         </Routes>
       </main>
     </div>

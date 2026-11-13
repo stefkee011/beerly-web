@@ -59,5 +59,21 @@
     "pickCountry": "Selecciona un país para ver su clasificación.",
     "failed": "No se pudieron cargar las clasificaciones.",
     "empty": "Aún no hay clasificaciones."
+  },
+  "addBeer": {
+  "navLabel": "Añadir cerveza",
+  "title": "Añadir una cerveza",
+  "loginPrompt": "<loginLink>Inicia sesión</loginLink> para añadir una cerveza.",
+  "name": "Nombre de la cerveza",
+  "brewery": "Cervecería",
+  "style": "Estilo (p. ej. lager, IPA)",
+  "abv": "Graduación (%)",
+  "country": "País",
+  "imageUrl": "Enlace de la imagen (https://…)",
+  "imageFailed": "No se pudo cargar esta imagen.",
+  "submit": "Añadir cerveza",
+  "submitting": "Añadiendo…",
+  "duplicate": "Esta cerveza ya está en la base de datos.",
+  "invalid": "Revisa los campos e inténtalo de nuevo."
   }
 }

@@ -1,6 +1,6 @@
 import { useMemo } from 'react';
 import { useTranslation } from 'react-i18next';
-import { countryCodes } from '../countries';
+import { countryCodes, intlLocale } from '../countries';
 
 interface CountrySelectProps {
   value: string;
@@ -14,10 +14,11 @@ export function CountrySelect({ value, onChange, placeholder, className = '' }: 
   const language = i18n.resolvedLanguage ?? 'en';
 
   const options = useMemo(() => {
-    const names = new Intl.DisplayNames([language], { type: 'region' });
+    const locale = intlLocale(language);
+    const names = new Intl.DisplayNames([locale], { type: 'region' });
     return countryCodes
       .map((code) => ({ code, name: names.of(code) ?? code }))
-      .sort((a, b) => a.name.localeCompare(b.name, language));
+      .sort((a, b) => a.name.localeCompare(b.name, locale));
   }, [language]);
 
   return (

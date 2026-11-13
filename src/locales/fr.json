@@ -59,5 +59,21 @@
     "pickCountry": "Choisissez un pays pour voir son classement.",
     "failed": "Impossible de charger les classements.",
     "empty": "Aucun classement pour le moment."
+  },
+  "addBeer": {
+  "navLabel": "Ajouter une bière",
+  "title": "Ajouter une bière",
+  "loginPrompt": "<loginLink>Connectez-vous</loginLink> pour ajouter une bière.",
+  "name": "Nom de la bière",
+  "brewery": "Brasserie",
+  "style": "Style (p. ex. lager, IPA)",
+  "abv": "Degré d’alcool (%)",
+  "country": "Pays",
+  "imageUrl": "Lien de l’image (https://…)",
+  "imageFailed": "Impossible de charger cette image.",
+  "submit": "Ajouter la bière",
+  "submitting": "Ajout…",
+  "duplicate": "Cette bière est déjà dans la base de données.",
+  "invalid": "Vérifiez les champs et réessayez."
   }
 }

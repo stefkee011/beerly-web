@@ -57,5 +57,21 @@
     "pickCountry": "Select a country to see its ranking.",
     "failed": "Couldn't load the rankings.",
     "empty": "No rankings yet."
+  },
+  "addBeer": {
+  "navLabel": "Add a beer",
+  "title": "Add a beer",
+  "loginPrompt": "<loginLink>Log in</loginLink> to add a beer.",
+  "name": "Beer name",
+  "brewery": "Brewery",
+  "style": "Style (e.g. Lager, IPA)",
+  "abv": "ABV (%)",
+  "country": "Country",
+  "imageUrl": "Image URL (https://…)",
+  "imageFailed": "This image couldn't be loaded.",
+  "submit": "Add beer",
+  "submitting": "Adding…",
+  "duplicate": "This beer is already in the database.",
+  "invalid": "Please check the fields and try again."
   }
 }

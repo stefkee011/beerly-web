@@ -57,5 +57,21 @@
     "pickCountry": "Wähle ein Land, um die Rangliste zu sehen.",
     "failed": "Die Ranglisten konnten nicht geladen werden.",
     "empty": "Noch keine Ranglisten."
+  },
+  "addBeer": {
+  "navLabel": "Bier hinzufügen",
+  "title": "Bier hinzufügen",
+  "loginPrompt": "<loginLink>Melde dich an</loginLink>, um ein Bier hinzuzufügen.",
+  "name": "Biername",
+  "brewery": "Brauerei",
+  "style": "Stil (z. B. Lager, IPA)",
+  "abv": "Alkoholgehalt (%)",
+  "country": "Land",
+  "imageUrl": "Bild-Link (https://…)",
+  "imageFailed": "Dieses Bild konnte nicht geladen werden.",
+  "submit": "Bier hinzufügen",
+  "submitting": "Wird hinzugefügt…",
+  "duplicate": "Dieses Bier ist bereits in der Datenbank.",
+  "invalid": "Bitte überprüfe die Felder und versuche es erneut."
   }
 }
