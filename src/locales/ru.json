@@ -24,7 +24,11 @@
     "beerCount_one": "{{count}} сорт",
     "beerCount_few": "{{count}} сорта",
     "beerCount_many": "{{count}} сортов",
-    "beerCount_other": "{{count}} сорта"
+    "beerCount_other": "{{count}} сорта",
+    "search": "Поиск пива или пивоварен",
+    "noResults": "Ничего не найдено.",
+    "noBeers": "Пока нет пива.",
+    "loadMore": "Показать ещё"
   },
   "review": {
     "loginPrompt": "<loginLink>Войдите</loginLink>, чтобы оставить отзыв.",
@@ -63,22 +67,22 @@
     "empty": "Рейтингов пока нет."
   },
   "addBeer": {
-  "navLabel": "Добавить пиво",
-  "title": "Добавить пиво",
-  "loginPrompt": "<loginLink>Войдите</loginLink>, чтобы добавить пиво.",
-  "name": "Название пива",
-  "brewery": "Пивоварня",
-  "style": "Стиль (напр., лагер, IPA)",
-  "abv": "Крепость (%)",
-  "country": "Страна",
-  "photo": "Фото",
-  "choosePhoto": "Выберите фото",
-  "uploading": "Загрузка…",
-  "photoRejected": "Не удалось использовать это фото. Нужен JPG, PNG или WebP, не менее 400 × 400 px, до 8 МБ.",
-  "tooManyUploads": "Слишком много загрузок. Попробуйте позже.",
-  "submit": "Добавить пиво",
-  "submitting": "Добавление…",
-  "duplicate": "Это пиво уже есть в базе.",
-  "invalid": "Проверьте поля и попробуйте ещё раз."
+    "navLabel": "Добавить пиво",
+    "title": "Добавить пиво",
+    "loginPrompt": "<loginLink>Войдите</loginLink>, чтобы добавить пиво.",
+    "name": "Название пива",
+    "brewery": "Пивоварня",
+    "style": "Стиль (напр., лагер, IPA)",
+    "abv": "Крепость (%)",
+    "country": "Страна",
+    "photo": "Фото",
+    "choosePhoto": "Выберите фото",
+    "uploading": "Загрузка…",
+    "photoRejected": "Не удалось использовать это фото. Нужен JPG, PNG или WebP, не менее 400 × 400 px, до 8 МБ.",
+    "tooManyUploads": "Слишком много загрузок. Попробуйте позже.",
+    "submit": "Добавить пиво",
+    "submitting": "Добавление…",
+    "duplicate": "Это пиво уже есть в базе.",
+    "invalid": "Проверьте поля и попробуйте ещё раз."
   }
 }

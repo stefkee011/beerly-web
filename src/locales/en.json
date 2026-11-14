@@ -20,7 +20,11 @@
     "reviewCount_one": "{{count}} review",
     "reviewCount_other": "{{count}} reviews",
     "beerCount_one": "{{count}} beer",
-    "beerCount_other": "{{count}} beers"
+    "beerCount_other": "{{count}} beers",
+    "search": "Search beers or breweries",
+    "noResults": "No beers match your search.",
+    "noBeers": "No beers yet.",
+    "loadMore": "Show more"
   },
   "review": {
     "loginPrompt": "<loginLink>Log in</loginLink> to leave a review.",
@@ -59,22 +63,22 @@
     "empty": "No rankings yet."
   },
   "addBeer": {
-  "navLabel": "Add a beer",
-  "title": "Add a beer",
-  "loginPrompt": "<loginLink>Log in</loginLink> to add a beer.",
-  "name": "Beer name",
-  "brewery": "Brewery",
-  "style": "Style (e.g. Lager, IPA)",
-  "abv": "ABV (%)",
-  "country": "Country",
-  "photo": "Photo",
-  "choosePhoto": "Choose a photo",
-  "uploading": "Uploading…",
-  "photoRejected": "Couldn't use this photo. Use a JPG, PNG or WebP, at least 400 × 400 px, under 8 MB.",
-  "tooManyUploads": "Too many uploads. Please try again later.",
-  "submit": "Add beer",
-  "submitting": "Adding…",
-  "duplicate": "This beer is already in the database.",
-  "invalid": "Please check the fields and try again."
+    "navLabel": "Add a beer",
+    "title": "Add a beer",
+    "loginPrompt": "<loginLink>Log in</loginLink> to add a beer.",
+    "name": "Beer name",
+    "brewery": "Brewery",
+    "style": "Style (e.g. Lager, IPA)",
+    "abv": "ABV (%)",
+    "country": "Country",
+    "photo": "Photo",
+    "choosePhoto": "Choose a photo",
+    "uploading": "Uploading…",
+    "photoRejected": "Couldn't use this photo. Use a JPG, PNG or WebP, at least 400 × 400 px, under 8 MB.",
+    "tooManyUploads": "Too many uploads. Please try again later.",
+    "submit": "Add beer",
+    "submitting": "Adding…",
+    "duplicate": "This beer is already in the database.",
+    "invalid": "Please check the fields and try again."
   }
 }

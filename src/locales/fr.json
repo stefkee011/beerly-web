@@ -22,7 +22,11 @@
     "reviewCount_other": "{{count}} avis",
     "beerCount_one": "{{count}} bière",
     "beerCount_many": "{{count}} de bières",
-    "beerCount_other": "{{count}} bières"
+    "beerCount_other": "{{count}} bières",
+    "search": "Rechercher une bière ou une brasserie",
+    "noResults": "Aucune bière ne correspond à votre recherche.",
+    "noBeers": "Aucune bière pour le moment.",
+    "loadMore": "Afficher plus"
   },
   "review": {
     "loginPrompt": "<loginLink>Connectez-vous</loginLink> pour laisser un avis.",
@@ -61,22 +65,22 @@
     "empty": "Aucun classement pour le moment."
   },
   "addBeer": {
-  "navLabel": "Ajouter une bière",
-  "title": "Ajouter une bière",
-  "loginPrompt": "<loginLink>Connectez-vous</loginLink> pour ajouter une bière.",
-  "name": "Nom de la bière",
-  "brewery": "Brasserie",
-  "style": "Style (p. ex. lager, IPA)",
-  "abv": "Degré d’alcool (%)",
-  "country": "Pays",
-  "photo": "Photo",
-  "choosePhoto": "Choisir une photo",
-  "uploading": "Envoi…",
-  "photoRejected": "Impossible d’utiliser cette photo. Utilisez un JPG, PNG ou WebP d’au moins 400 × 400 px et de moins de 8 Mo.",
-  "tooManyUploads": "Trop d’envois. Veuillez réessayer plus tard.",
-  "submit": "Ajouter la bière",
-  "submitting": "Ajout…",
-  "duplicate": "Cette bière est déjà dans la base de données.",
-  "invalid": "Vérifiez les champs et réessayez."
+    "navLabel": "Ajouter une bière",
+    "title": "Ajouter une bière",
+    "loginPrompt": "<loginLink>Connectez-vous</loginLink> pour ajouter une bière.",
+    "name": "Nom de la bière",
+    "brewery": "Brasserie",
+    "style": "Style (p. ex. lager, IPA)",
+    "abv": "Degré d’alcool (%)",
+    "country": "Pays",
+    "photo": "Photo",
+    "choosePhoto": "Choisir une photo",
+    "uploading": "Envoi…",
+    "photoRejected": "Impossible d’utiliser cette photo. Utilisez un JPG, PNG ou WebP d’au moins 400 × 400 px et de moins de 8 Mo.",
+    "tooManyUploads": "Trop d’envois. Veuillez réessayer plus tard.",
+    "submit": "Ajouter la bière",
+    "submitting": "Ajout…",
+    "duplicate": "Cette bière est déjà dans la base de données.",
+    "invalid": "Vérifiez les champs et réessayez."
   }
 }

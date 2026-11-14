@@ -22,7 +22,11 @@
     "reviewCount_other": "{{count}} reseñas",
     "beerCount_one": "{{count}} cerveza",
     "beerCount_many": "{{count}} de cervezas",
-    "beerCount_other": "{{count}} cervezas"
+    "beerCount_other": "{{count}} cervezas",
+    "search": "Buscar cervezas o cervecerías",
+    "noResults": "Ninguna cerveza coincide con tu búsqueda.",
+    "noBeers": "Aún no hay cervezas.",
+    "loadMore": "Mostrar más"
   },
   "review": {
     "loginPrompt": "<loginLink>Inicia sesión</loginLink> para dejar una reseña.",
@@ -61,22 +65,22 @@
     "empty": "Aún no hay clasificaciones."
   },
   "addBeer": {
-  "navLabel": "Añadir cerveza",
-  "title": "Añadir una cerveza",
-  "loginPrompt": "<loginLink>Inicia sesión</loginLink> para añadir una cerveza.",
-  "name": "Nombre de la cerveza",
-  "brewery": "Cervecería",
-  "style": "Estilo (p. ej. lager, IPA)",
-  "abv": "Graduación (%)",
-  "country": "País",
-  "photo": "Foto",
-  "choosePhoto": "Elige una foto",
-  "uploading": "Subiendo…",
-  "photoRejected": "No se pudo usar esta foto. Usa JPG, PNG o WebP, de al menos 400 × 400 px y menos de 8 MB.",
-  "tooManyUploads": "Demasiadas subidas. Inténtalo de nuevo más tarde.",
-  "submit": "Añadir cerveza",
-  "submitting": "Añadiendo…",
-  "duplicate": "Esta cerveza ya está en la base de datos.",
-  "invalid": "Revisa los campos e inténtalo de nuevo."
+    "navLabel": "Añadir cerveza",
+    "title": "Añadir una cerveza",
+    "loginPrompt": "<loginLink>Inicia sesión</loginLink> para añadir una cerveza.",
+    "name": "Nombre de la cerveza",
+    "brewery": "Cervecería",
+    "style": "Estilo (p. ej. lager, IPA)",
+    "abv": "Graduación (%)",
+    "country": "País",
+    "photo": "Foto",
+    "choosePhoto": "Elige una foto",
+    "uploading": "Subiendo…",
+    "photoRejected": "No se pudo usar esta foto. Usa JPG, PNG o WebP, de al menos 400 × 400 px y menos de 8 MB.",
+    "tooManyUploads": "Demasiadas subidas. Inténtalo de nuevo más tarde.",
+    "submit": "Añadir cerveza",
+    "submitting": "Añadiendo…",
+    "duplicate": "Esta cerveza ya está en la base de datos.",
+    "invalid": "Revisa los campos e inténtalo de nuevo."
   }
 }

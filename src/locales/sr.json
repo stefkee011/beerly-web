@@ -22,7 +22,11 @@
     "reviewCount_other": "{{count}} recenzija",
     "beerCount_one": "{{count}} pivo",
     "beerCount_few": "{{count}} piva",
-    "beerCount_other": "{{count}} piva"
+    "beerCount_other": "{{count}} piva",
+    "search": "Pretražite piva ili pivare",
+    "noResults": "Nema piva koja odgovaraju pretrazi.",
+    "noBeers": "Još nema piva.",
+    "loadMore": "Prikaži još"
   },
   "review": {
     "loginPrompt": "<loginLink>Prijavite se</loginLink> da biste ostavili recenziju.",
@@ -61,22 +65,22 @@
     "empty": "Još nema rang lista."
   },
   "addBeer": {
-  "navLabel": "Dodaj pivo",
-  "title": "Dodaj pivo",
-  "loginPrompt": "<loginLink>Prijavite se</loginLink> da biste dodali pivo.",
-  "name": "Naziv piva",
-  "brewery": "Pivara",
-  "style": "Stil (npr. lager, IPA)",
-  "abv": "Alkohol (%)",
-  "country": "Zemlja",
-  "photo": "Fotografija",
-  "choosePhoto": "Izaberite fotografiju",
-  "uploading": "Otpremanje…",
-  "photoRejected": "Ova fotografija se ne može koristiti. Koristite JPG, PNG ili WebP, najmanje 400 × 400 px, do 8 MB.",
-  "tooManyUploads": "Previše otpremanja. Pokušajte ponovo kasnije.",
-  "submit": "Dodaj pivo",
-  "submitting": "Dodavanje…",
-  "duplicate": "Ovo pivo je već u bazi.",
-  "invalid": "Proverite polja i pokušajte ponovo."
+    "navLabel": "Dodaj pivo",
+    "title": "Dodaj pivo",
+    "loginPrompt": "<loginLink>Prijavite se</loginLink> da biste dodali pivo.",
+    "name": "Naziv piva",
+    "brewery": "Pivara",
+    "style": "Stil (npr. lager, IPA)",
+    "abv": "Alkohol (%)",
+    "country": "Zemlja",
+    "photo": "Fotografija",
+    "choosePhoto": "Izaberite fotografiju",
+    "uploading": "Otpremanje…",
+    "photoRejected": "Ova fotografija se ne može koristiti. Koristite JPG, PNG ili WebP, najmanje 400 × 400 px, do 8 MB.",
+    "tooManyUploads": "Previše otpremanja. Pokušajte ponovo kasnije.",
+    "submit": "Dodaj pivo",
+    "submitting": "Dodavanje…",
+    "duplicate": "Ovo pivo je već u bazi.",
+    "invalid": "Proverite polja i pokušajte ponovo."
   }
 }

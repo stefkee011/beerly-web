@@ -24,7 +24,11 @@
     "beerCount_one": "{{count}} pivo",
     "beerCount_few": "{{count}} piva",
     "beerCount_many": "{{count}} piva",
-    "beerCount_other": "{{count}} piv"
+    "beerCount_other": "{{count}} piv",
+    "search": "Hledat piva nebo pivovary",
+    "noResults": "Žádná piva neodpovídají hledání.",
+    "noBeers": "Zatím žádná piva.",
+    "loadMore": "Zobrazit více"
   },
   "review": {
     "loginPrompt": "<loginLink>Přihlaste se</loginLink> a přidejte recenzi.",
@@ -63,22 +67,22 @@
     "empty": "Zatím žádné žebříčky."
   },
   "addBeer": {
-  "navLabel": "Přidat pivo",
-  "title": "Přidat pivo",
-  "loginPrompt": "<loginLink>Přihlaste se</loginLink> a přidejte pivo.",
-  "name": "Název piva",
-  "brewery": "Pivovar",
-  "style": "Styl (např. ležák, IPA)",
-  "abv": "Obsah alkoholu (%)",
-  "country": "Země",
-  "photo": "Fotka",
-  "choosePhoto": "Vyberte fotku",
-  "uploading": "Nahrávání…",
-  "photoRejected": "Tuto fotku nelze použít. Použijte JPG, PNG nebo WebP, alespoň 400 × 400 px, do 8 MB.",
-  "tooManyUploads": "Příliš mnoho nahrávání. Zkuste to prosím později.",
-  "submit": "Přidat pivo",
-  "submitting": "Přidávání…",
-  "duplicate": "Toto pivo už v databázi je.",
-  "invalid": "Zkontrolujte políčka a zkuste to znovu."
+    "navLabel": "Přidat pivo",
+    "title": "Přidat pivo",
+    "loginPrompt": "<loginLink>Přihlaste se</loginLink> a přidejte pivo.",
+    "name": "Název piva",
+    "brewery": "Pivovar",
+    "style": "Styl (např. ležák, IPA)",
+    "abv": "Obsah alkoholu (%)",
+    "country": "Země",
+    "photo": "Fotka",
+    "choosePhoto": "Vyberte fotku",
+    "uploading": "Nahrávání…",
+    "photoRejected": "Tuto fotku nelze použít. Použijte JPG, PNG nebo WebP, alespoň 400 × 400 px, do 8 MB.",
+    "tooManyUploads": "Příliš mnoho nahrávání. Zkuste to prosím později.",
+    "submit": "Přidat pivo",
+    "submitting": "Přidávání…",
+    "duplicate": "Toto pivo už v databázi je.",
+    "invalid": "Zkontrolujte políčka a zkuste to znovu."
   }
 }

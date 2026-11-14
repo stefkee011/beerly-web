@@ -20,7 +20,11 @@
     "reviewCount_one": "{{count}} Bewertung",
     "reviewCount_other": "{{count}} Bewertungen",
     "beerCount_one": "{{count}} Bier",
-    "beerCount_other": "{{count}} Biere"
+    "beerCount_other": "{{count}} Biere",
+    "search": "Biere oder Brauereien suchen",
+    "noResults": "Keine Biere gefunden.",
+    "noBeers": "Noch keine Biere.",
+    "loadMore": "Mehr anzeigen"
   },
   "review": {
     "loginPrompt": "<loginLink>Melde dich an</loginLink>, um eine Bewertung abzugeben.",
@@ -59,22 +63,22 @@
     "empty": "Noch keine Ranglisten."
   },
   "addBeer": {
-  "navLabel": "Bier hinzufügen",
-  "title": "Bier hinzufügen",
-  "loginPrompt": "<loginLink>Melde dich an</loginLink>, um ein Bier hinzuzufügen.",
-  "name": "Biername",
-  "brewery": "Brauerei",
-  "style": "Stil (z. B. Lager, IPA)",
-  "abv": "Alkoholgehalt (%)",
-  "country": "Land",
-  "photo": "Foto",
-  "choosePhoto": "Foto auswählen",
-  "uploading": "Wird hochgeladen…",
-  "photoRejected": "Dieses Foto kann nicht verwendet werden. Nutze JPG, PNG oder WebP, mindestens 400 × 400 px, höchstens 8 MB.",
-  "tooManyUploads": "Zu viele Uploads. Bitte versuche es später erneut.",
-  "submit": "Bier hinzufügen",
-  "submitting": "Wird hinzugefügt…",
-  "duplicate": "Dieses Bier ist bereits in der Datenbank.",
-  "invalid": "Bitte überprüfe die Felder und versuche es erneut."
+    "navLabel": "Bier hinzufügen",
+    "title": "Bier hinzufügen",
+    "loginPrompt": "<loginLink>Melde dich an</loginLink>, um ein Bier hinzuzufügen.",
+    "name": "Biername",
+    "brewery": "Brauerei",
+    "style": "Stil (z. B. Lager, IPA)",
+    "abv": "Alkoholgehalt (%)",
+    "country": "Land",
+    "photo": "Foto",
+    "choosePhoto": "Foto auswählen",
+    "uploading": "Wird hochgeladen…",
+    "photoRejected": "Dieses Foto kann nicht verwendet werden. Nutze JPG, PNG oder WebP, mindestens 400 × 400 px, höchstens 8 MB.",
+    "tooManyUploads": "Zu viele Uploads. Bitte versuche es später erneut.",
+    "submit": "Bier hinzufügen",
+    "submitting": "Wird hinzugefügt…",
+    "duplicate": "Dieses Bier ist bereits in der Datenbank.",
+    "invalid": "Bitte überprüfe die Felder und versuche es erneut."
   }
 }

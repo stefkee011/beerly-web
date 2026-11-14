@@ -72,7 +72,7 @@ function Rankings() {
             value={country}
             onChange={setCountry}
             placeholder={t('rankings.selectCountry')}
-            className="px-4 py-2 text-sm"
+            className="px-4 py-2 text-base sm:text-sm"
           />
         )}
       </div>

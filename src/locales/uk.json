@@ -24,7 +24,11 @@
     "beerCount_one": "{{count}} сорт",
     "beerCount_few": "{{count}} сорти",
     "beerCount_many": "{{count}} сортів",
-    "beerCount_other": "{{count}} сорту"
+    "beerCount_other": "{{count}} сорту",
+    "search": "Пошук пива або пивоварень",
+    "noResults": "Нічого не знайдено.",
+    "noBeers": "Поки що немає пива.",
+    "loadMore": "Показати більше"
   },
   "review": {
     "loginPrompt": "<loginLink>Увійдіть</loginLink>, щоб залишити відгук.",
@@ -63,22 +67,22 @@
     "empty": "Рейтингів поки немає."
   },
   "addBeer": {
-  "navLabel": "Додати пиво",
-  "title": "Додати пиво",
-  "loginPrompt": "<loginLink>Увійдіть</loginLink>, щоб додати пиво.",
-  "name": "Назва пива",
-  "brewery": "Пивоварня",
-  "style": "Стиль (напр., лагер, IPA)",
-  "abv": "Міцність (%)",
-  "country": "Країна",
-  "photo": "Фото",
-  "choosePhoto": "Виберіть фото",
-  "uploading": "Завантаження…",
-  "photoRejected": "Не вдалося використати це фото. Потрібен JPG, PNG або WebP, не менше 400 × 400 px, до 8 МБ.",
-  "tooManyUploads": "Забагато завантажень. Спробуйте пізніше.",
-  "submit": "Додати пиво",
-  "submitting": "Додавання…",
-  "duplicate": "Це пиво вже є в базі.",
-  "invalid": "Перевірте поля та спробуйте ще раз."
+    "navLabel": "Додати пиво",
+    "title": "Додати пиво",
+    "loginPrompt": "<loginLink>Увійдіть</loginLink>, щоб додати пиво.",
+    "name": "Назва пива",
+    "brewery": "Пивоварня",
+    "style": "Стиль (напр., лагер, IPA)",
+    "abv": "Міцність (%)",
+    "country": "Країна",
+    "photo": "Фото",
+    "choosePhoto": "Виберіть фото",
+    "uploading": "Завантаження…",
+    "photoRejected": "Не вдалося використати це фото. Потрібен JPG, PNG або WebP, не менше 400 × 400 px, до 8 МБ.",
+    "tooManyUploads": "Забагато завантажень. Спробуйте пізніше.",
+    "submit": "Додати пиво",
+    "submitting": "Додавання…",
+    "duplicate": "Це пиво вже є в базі.",
+    "invalid": "Перевірте поля та спробуйте ще раз."
   }
 }

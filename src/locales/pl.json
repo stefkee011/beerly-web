@@ -24,7 +24,11 @@
     "beerCount_one": "{{count}} piwo",
     "beerCount_few": "{{count}} piwa",
     "beerCount_many": "{{count}} piw",
-    "beerCount_other": "{{count}} piwa"
+    "beerCount_other": "{{count}} piwa",
+    "search": "Szukaj piw lub browarów",
+    "noResults": "Brak piw pasujących do wyszukiwania.",
+    "noBeers": "Brak piw.",
+    "loadMore": "Pokaż więcej"
   },
   "review": {
     "loginPrompt": "<loginLink>Zaloguj się</loginLink>, aby dodać recenzję.",
@@ -63,22 +67,22 @@
     "empty": "Brak rankingów."
   },
   "addBeer": {
-  "navLabel": "Dodaj piwo",
-  "title": "Dodaj piwo",
-  "loginPrompt": "<loginLink>Zaloguj się</loginLink>, aby dodać piwo.",
-  "name": "Nazwa piwa",
-  "brewery": "Browar",
-  "style": "Styl (np. lager, IPA)",
-  "abv": "Zawartość alkoholu (%)",
-  "country": "Kraj",
-  "photo": "Zdjęcie",
-  "choosePhoto": "Wybierz zdjęcie",
-  "uploading": "Przesyłanie…",
-  "photoRejected": "Nie można użyć tego zdjęcia. Użyj JPG, PNG lub WebP, co najmniej 400 × 400 px, do 8 MB.",
-  "tooManyUploads": "Zbyt wiele przesłań. Spróbuj ponownie później.",
-  "submit": "Dodaj piwo",
-  "submitting": "Dodawanie…",
-  "duplicate": "To piwo jest już w bazie.",
-  "invalid": "Sprawdź pola i spróbuj ponownie."
+    "navLabel": "Dodaj piwo",
+    "title": "Dodaj piwo",
+    "loginPrompt": "<loginLink>Zaloguj się</loginLink>, aby dodać piwo.",
+    "name": "Nazwa piwa",
+    "brewery": "Browar",
+    "style": "Styl (np. lager, IPA)",
+    "abv": "Zawartość alkoholu (%)",
+    "country": "Kraj",
+    "photo": "Zdjęcie",
+    "choosePhoto": "Wybierz zdjęcie",
+    "uploading": "Przesyłanie…",
+    "photoRejected": "Nie można użyć tego zdjęcia. Użyj JPG, PNG lub WebP, co najmniej 400 × 400 px, do 8 MB.",
+    "tooManyUploads": "Zbyt wiele przesłań. Spróbuj ponownie później.",
+    "submit": "Dodaj piwo",
+    "submitting": "Dodawanie…",
+    "duplicate": "To piwo jest już w bazie.",
+    "invalid": "Sprawdź pola i spróbuj ponownie."
   }
 }
