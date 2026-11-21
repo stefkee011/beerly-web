@@ -81,6 +81,12 @@
     "submit": "Ajouter la bière",
     "submitting": "Ajout…",
     "duplicate": "Cette bière est déjà dans la base de données.",
-    "invalid": "Vérifiez les champs et réessayez."
+    "invalid": "Vérifiez les champs et réessayez.",
+    "tooSmall": "Cette photo est trop petite. Utilisez-en une d’au moins {{min}} × {{min}} px.",
+    "notBeer": "Cela ne ressemble pas à une bouteille ou une canette de bière.",
+    "person": "Utilisez une photo de la bière sans personne dans le cadre.",
+    "watermark": "Cela ressemble à une photo de banque d’images ou avec filigrane. Envoyez la vôtre.",
+    "poorQuality": "Cette photo est trop floue ou trop sombre. Essayez une photo plus nette, étiquette face à l’appareil.",
+    "unavailable": "La vérification des photos est temporairement indisponible. Réessayez dans quelques minutes."
   }
 }

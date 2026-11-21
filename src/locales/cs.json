@@ -83,6 +83,12 @@
     "submit": "Přidat pivo",
     "submitting": "Přidávání…",
     "duplicate": "Toto pivo už v databázi je.",
-    "invalid": "Zkontrolujte políčka a zkuste to znovu."
+    "invalid": "Zkontrolujte políčka a zkuste to znovu.",
+    "tooSmall": "Tato fotka je příliš malá. Použijte fotku alespoň {{min}} × {{min}} px.",
+    "notBeer": "Tohle nevypadá jako láhev nebo plechovka piva.",
+    "person": "Použijte prosím fotku piva bez osoby v záběru.",
+    "watermark": "Vypadá to jako stock fotka nebo fotka s vodoznakem. Nahrajte prosím vlastní.",
+    "poorQuality": "Fotka je příliš rozmazaná nebo tmavá. Zkuste ostřejší snímek s etiketou otočenou ke kameře.",
+    "unavailable": "Kontrola fotek je dočasně nedostupná. Zkuste to prosím za pár minut."
   }
 }

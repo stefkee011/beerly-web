@@ -81,6 +81,12 @@
     "submit": "Añadir cerveza",
     "submitting": "Añadiendo…",
     "duplicate": "Esta cerveza ya está en la base de datos.",
-    "invalid": "Revisa los campos e inténtalo de nuevo."
+    "invalid": "Revisa los campos e inténtalo de nuevo.",
+    "tooSmall": "Esta foto es demasiado pequeña. Usa una de al menos {{min}} × {{min}} px.",
+    "notBeer": "Esto no parece una botella ni una lata de cerveza.",
+    "person": "Usa una foto de la cerveza sin personas en el encuadre.",
+    "watermark": "Parece una foto de stock o con marca de agua. Sube una propia.",
+    "poorQuality": "La foto está demasiado borrosa u oscura. Prueba con una más nítida y con la etiqueta hacia la cámara.",
+    "unavailable": "La comprobación de fotos no está disponible temporalmente. Inténtalo de nuevo en unos minutos."
   }
 }

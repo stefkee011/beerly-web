@@ -11,6 +11,13 @@ const inputStyle =
   'w-full rounded-xl bg-neutral-900 px-4 py-3 outline-none ring-1 ring-neutral-800 focus:ring-neutral-600';
 const labelStyle = 'mb-1.5 block text-xs uppercase tracking-wide text-neutral-500';
 
+const rejectMessages: Record<string, string> = {
+  not_beer: 'addBeer.notBeer',
+  person: 'addBeer.person',
+  watermark: 'addBeer.watermark',
+  poor_quality: 'addBeer.poorQuality',
+};
+
 function AddBeer() {
   const { t } = useTranslation();
   const { token } = useAuth();
@@ -44,26 +51,38 @@ function AddBeer() {
     setPhotoError('');
     setUploading(true);
 
-    try {
+      try {
         const body = new FormData();
         body.append('file', file);
 
-        const res = await fetch(`${API_URL}/api/images`, {
-            method: 'POST',
-            headers: { Authorization: `Bearer ${token}` },
-            body,
-        });
+      const res = await fetch(`${API_URL}/api/images`, {
+        method: 'POST',
+        headers: { Authorization: `Bearer ${token}` },
+        body,
+      });
 
-        if (res.ok) {
-            const data = await res.json();
-            setImagePath(data.imageUrl);
-        } else if (res.status === 401) {
-          setPhotoError(t('common.sessionExpired'));
-        } else if (res.status === 429) {
-          setPhotoError(t('addBeer.tooManyUploads'));
-        } else {
-          setPhotoError(t('addBeer.photoRejected'));
-        }
+      if (res.ok) {
+        const data = await res.json();
+        setImagePath(data.imageUrl);
+      } else if (res.status === 401) {
+        setPhotoError(t('common.sessionExpired'));
+      } else if (res.status === 422) {
+        const data = await res.json().catch(() => null);
+        setPhotoError(t(rejectMessages[data?.code] ?? 'addBeer.photoRejected'));
+      } else if (res.status === 400) {
+        const data = await res.json().catch(() => null);
+        setPhotoError(
+          data?.code === 'too_small'
+            ? t('addBeer.tooSmall', { min: data.min })
+            : t('addBeer.photoRejected'),
+        );
+      } else if (res.status === 429) {
+        setPhotoError(t('addBeer.tooManyUploads'));
+      } else if (res.status === 503) {
+        setPhotoError(t('addBeer.unavailable'));
+      } else {
+        setPhotoError(t('addBeer.photoRejected'));
+      }
     } catch {
       setPhotoError(t('common.serverError'));
     } finally {

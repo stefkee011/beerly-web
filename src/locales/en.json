@@ -79,6 +79,13 @@
     "submit": "Add beer",
     "submitting": "Adding…",
     "duplicate": "This beer is already in the database.",
-    "invalid": "Please check the fields and try again."
+    "invalid": "Please check the fields and try again.",
+    "tooSmall": "This photo is too small. Use one at least 400 × 400 px.",
+    "notBeer": "This doesn't look like a beer bottle or can.",
+    "person": "Please use a photo of the beer without a person in the frame.",
+    "watermark": "This looks like a stock or watermarked photo. Please upload your own.",
+    "poorQuality": "This photo is too blurry or dark to use. Try a sharper shot with the label facing the camera.",
+    "unavailable": "Photo check is temporarily unavailable. Please try again in a few minutes."
+    
   }
 }

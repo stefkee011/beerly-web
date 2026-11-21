@@ -81,6 +81,12 @@
     "submit": "Dodaj pivo",
     "submitting": "Dodavanje…",
     "duplicate": "Ovo pivo je već u bazi.",
-    "invalid": "Proverite polja i pokušajte ponovo."
+    "invalid": "Proverite polja i pokušajte ponovo.",
+    "tooSmall": "Fotografija je premala. Koristite fotografiju od najmanje {{min}} × {{min}} px.",
+    "notBeer": "Ovo ne izgleda kao flaša ili limenka piva.",
+    "person": "Koristite fotografiju piva bez osobe u kadru.",
+    "watermark": "Ovo izgleda kao stok fotografija ili fotografija sa vodenim žigom. Otpremite sopstvenu.",
+    "poorQuality": "Fotografija je previše mutna ili tamna. Pokušajte oštriju sliku sa etiketom okrenutom ka kameri.",
+    "unavailable": "Provera fotografija je trenutno nedostupna. Pokušajte ponovo za nekoliko minuta."
   }
 }

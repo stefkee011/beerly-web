@@ -83,6 +83,12 @@
     "submit": "Dodaj piwo",
     "submitting": "Dodawanie…",
     "duplicate": "To piwo jest już w bazie.",
-    "invalid": "Sprawdź pola i spróbuj ponownie."
+    "invalid": "Sprawdź pola i spróbuj ponownie.",
+    "tooSmall": "To zdjęcie jest zbyt małe. Użyj zdjęcia o rozmiarze co najmniej {{min}} × {{min}} px.",
+    "notBeer": "To nie wygląda na butelkę ani puszkę piwa.",
+    "person": "Użyj zdjęcia piwa bez osoby w kadrze.",
+    "watermark": "To wygląda na zdjęcie stockowe lub ze znakiem wodnym. Prześlij własne.",
+    "poorQuality": "To zdjęcie jest zbyt rozmazane lub ciemne. Spróbuj ostrzejszego ujęcia z etykietą skierowaną do aparatu.",
+    "unavailable": "Sprawdzanie zdjęć jest chwilowo niedostępne. Spróbuj ponownie za kilka minut."
   }
 }
