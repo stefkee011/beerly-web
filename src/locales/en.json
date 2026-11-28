@@ -85,7 +85,8 @@
     "person": "Please use a photo of the beer without a person in the frame.",
     "watermark": "This looks like a stock or watermarked photo. Please upload your own.",
     "poorQuality": "This photo is too blurry or dark to use. Try a sharper shot with the label facing the camera.",
-    "unavailable": "Photo check is temporarily unavailable. Please try again in a few minutes."
+    "unavailable": "Photo check is temporarily unavailable. Please try again in a few minutes.",
+    "prefilled": "Filled in from the label. Please check it."
     
   }
 }

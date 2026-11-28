@@ -89,6 +89,7 @@
     "person": "Użyj zdjęcia piwa bez osoby w kadrze.",
     "watermark": "To wygląda na zdjęcie stockowe lub ze znakiem wodnym. Prześlij własne.",
     "poorQuality": "To zdjęcie jest zbyt rozmazane lub ciemne. Spróbuj ostrzejszego ujęcia z etykietą skierowaną do aparatu.",
-    "unavailable": "Sprawdzanie zdjęć jest chwilowo niedostępne. Spróbuj ponownie za kilka minut."
+    "unavailable": "Sprawdzanie zdjęć jest chwilowo niedostępne. Spróbuj ponownie za kilka minut.",
+    "prefilled": "Uzupełniono z etykiety. Sprawdź dane."
   }
 }

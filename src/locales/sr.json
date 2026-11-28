@@ -87,6 +87,7 @@
     "person": "Koristite fotografiju piva bez osobe u kadru.",
     "watermark": "Ovo izgleda kao stok fotografija ili fotografija sa vodenim žigom. Otpremite sopstvenu.",
     "poorQuality": "Fotografija je previše mutna ili tamna. Pokušajte oštriju sliku sa etiketom okrenutom ka kameri.",
-    "unavailable": "Provera fotografija je trenutno nedostupna. Pokušajte ponovo za nekoliko minuta."
+    "unavailable": "Provera fotografija je trenutno nedostupna. Pokušajte ponovo za nekoliko minuta.",
+    "prefilled": "Popunjeno sa etikete. Proverite podatke."
   }
 }

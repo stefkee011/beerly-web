@@ -6,6 +6,7 @@ import { Trans, useTranslation } from 'react-i18next';
 import { API_URL } from '../config';
 import { useAuth } from '../auth';
 import { CountrySelect } from '../components/CountrySelect';
+import type { LabelSuggestions } from '../types';
 
 const inputStyle =
   'w-full rounded-xl bg-neutral-900 px-4 py-3 outline-none ring-1 ring-neutral-800 focus:ring-neutral-600';
@@ -30,6 +31,7 @@ function AddBeer() {
   const [imagePath, setImagePath] = useState('');
   const [uploading, setUploading] = useState(false);
   const [photoError, setPhotoError] = useState('');
+  const [prefilled, setPrefilled] = useState(false);
   const [error, setError] = useState('');
   const [submitting, setSubmitting] = useState(false);
 
@@ -42,6 +44,18 @@ function AddBeer() {
         />
       </p>
     );
+  }
+
+  function applySuggestions(s: LabelSuggestions | null) {
+    if (!s) return;
+    // Only fill empty fields, so anything the user already typed is kept
+    setName((current) => current || s.name || '');
+    setBrewery((current) => current || s.brewery || '');
+    setStyle((current) => current || s.style || '');
+    setAbv((current) => current || (s.abvPercentage ? String(s.abvPercentage) : ''));
+    if (s.name || s.brewery || s.style || s.abvPercentage) {
+      setPrefilled(true);
+    }
   }
 
   async function handleFile(e: ChangeEvent<HTMLInputElement>) {
@@ -64,6 +78,7 @@ function AddBeer() {
       if (res.ok) {
         const data = await res.json();
         setImagePath(data.imageUrl);
+        applySuggestions(data.suggestions);
       } else if (res.status === 401) {
         setPhotoError(t('common.sessionExpired'));
       } else if (res.status === 422) {
@@ -144,6 +159,30 @@ function AddBeer() {
 
       <form onSubmit={handleSubmit} className="mt-8 space-y-5">
         <div>
+            <label className={labelStyle}>{t('addBeer.photo')}</label>
+
+            <label className="flex size-48 cursor-pointer items-center justify-center rounded-2xl bg-neutral-900 p-4 ring-1 ring-neutral-800 transition hover:bg-neutral-800">
+                {imagePath ? (
+                    <img src={imageSrc(imagePath)} alt="" className="max-h-full max-w-full object-contain" />
+                ) : (
+                  <span className="text-center text-sm text-neutral-500">
+                    {uploading ? t('addBeer.uploading') : t('addBeer.choosePhoto')}
+                  </span>
+                )}
+                <input
+                    type="file"
+                    accept="image/jpeg,image/png,image/webp"
+                    onChange={handleFile}
+                    disabled={uploading}
+                    className="hidden"
+                />
+            </label>
+
+            {photoError && <p className="mt-2 text-sm text-red-400">{photoError}</p>}
+            {prefilled && <p className="mt-2 text-sm text-neutral-500">{t('addBeer.prefilled')}</p>}
+        </div>
+
+        <div>
           <label className={labelStyle}>{t('addBeer.name')}</label>
           <input value={name} onChange={(e) => setName(e.target.value)} required className={inputStyle} />
         </div>
@@ -181,29 +220,6 @@ function AddBeer() {
               className="w-full px-4 py-3"
             />
           </div>
-        </div>
-
-        <div>
-            <label className={labelStyle}>{t('addBeer.photo')}</label>
-
-            <label className="flex size-48 cursor-pointer items-center justify-center rounded-2xl bg-neutral-900 p-4 ring-1 ring-neutral-800 transition hover:bg-neutral-800">
-                {imagePath ? (
-                    <img src={imageSrc(imagePath)} alt="" className="max-h-full max-w-full object-contain" />
-                ) : (
-                  <span className="text-center text-sm text-neutral-500">
-                    {uploading ? t('addBeer.uploading') : t('addBeer.choosePhoto')}
-                  </span>
-                )}
-                <input
-                    type="file"
-                    accept="image/jpeg,image/png,image/webp"
-                    onChange={handleFile}
-                    disabled={uploading}
-                    className="hidden"
-                />
-            </label>
-
-            {photoError && <p className="mt-2 text-sm text-red-400">{photoError}</p>}
         </div>
 
         {error && <p className="text-sm text-red-400">{error}</p>}

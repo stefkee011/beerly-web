@@ -20,3 +20,11 @@ export interface RankingEntry {
   username: string;
   uniqueBeerCount: number;
 }
+
+export interface LabelSuggestions {
+  name: string | null;
+  brewery: string | null;
+  style: string | null;
+  abvPercentage: number | null;
+  country: string | null;
+}

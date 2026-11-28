@@ -87,6 +87,7 @@
     "person": "Utilisez une photo de la bière sans personne dans le cadre.",
     "watermark": "Cela ressemble à une photo de banque d’images ou avec filigrane. Envoyez la vôtre.",
     "poorQuality": "Cette photo est trop floue ou trop sombre. Essayez une photo plus nette, étiquette face à l’appareil.",
-    "unavailable": "La vérification des photos est temporairement indisponible. Réessayez dans quelques minutes."
+    "unavailable": "La vérification des photos est temporairement indisponible. Réessayez dans quelques minutes.",
+    "prefilled": "Rempli à partir de l’étiquette. Veuillez vérifier."
   }
 }

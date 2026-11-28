@@ -85,6 +85,7 @@
     "person": "Bitte nutze ein Foto des Biers ohne Person im Bild.",
     "watermark": "Das sieht nach einem Stockfoto oder einem Foto mit Wasserzeichen aus. Bitte lade ein eigenes hoch.",
     "poorQuality": "Dieses Foto ist zu unscharf oder zu dunkel. Versuche eine schärfere Aufnahme mit dem Etikett zur Kamera.",
-    "unavailable": "Die Fotoprüfung ist vorübergehend nicht verfügbar. Bitte versuche es in ein paar Minuten erneut."
+    "unavailable": "Die Fotoprüfung ist vorübergehend nicht verfügbar. Bitte versuche es in ein paar Minuten erneut.",
+    "prefilled": "Vom Etikett übernommen. Bitte prüfe die Angaben."
   }
 }

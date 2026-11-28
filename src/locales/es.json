@@ -87,6 +87,7 @@
     "person": "Usa una foto de la cerveza sin personas en el encuadre.",
     "watermark": "Parece una foto de stock o con marca de agua. Sube una propia.",
     "poorQuality": "La foto está demasiado borrosa u oscura. Prueba con una más nítida y con la etiqueta hacia la cámara.",
-    "unavailable": "La comprobación de fotos no está disponible temporalmente. Inténtalo de nuevo en unos minutos."
+    "unavailable": "La comprobación de fotos no está disponible temporalmente. Inténtalo de nuevo en unos minutos.",
+    "prefilled": "Rellenado desde la etiqueta. Revisa los datos."
   }
 }
